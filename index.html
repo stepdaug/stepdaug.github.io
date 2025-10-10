@@ -150,25 +150,25 @@
         <section id="about">
             <h2>About</h2>
             <p>
-                I am an NIHR Academic Clinical Lecturer in Neurology at Imperial College London, with a research focus in what I loosely term 'Dataology': the diagnosis and management of clinical data disorders. My work addresses the critical 'analytical gap' between the data we collect from patients and the actionable insights needed to reliably inform clinical decisions. This challenge is becoming increasingly urgent with the dawn of AI in healthcare.
+                I am a researcher at Imperial College London.
             </p>
             <p>
-                A key focus of my work is developing tools to both improve current data practices and create safe 'sandbox' environments for future clinical AI. By creating robust synthetic data, we can rigorously test, validate, and understand AI systems; finding their flaws and failure modes before patients or their data are exposed to them.
+                I study how to bridge the gap between messy clinical data and the reliable insights doctors and researchers need to make decisions, particularly for new AI systems.
             </p>
         </section>
         
         <section id="current-work">
             <h2>Current Work & Interests</h2>
-            <p>My recent work uses simulation and synthetic data to explore and inform better data practices in clinical care.</p>
+            <p>My recent work develops tools using simulation and synthetic data to explore and improve clinical data practices.</p>
             <ul>
                 <li>
-                    <strong>Quantifying Individual Treatment Effects:</strong> Developing a framework and companion web application to help clinicians move from intuitive guesswork to useful data for better clinical decisions.
+                    <strong>Quantifying Individual Treatment Effects:</strong> A framework and companion web application to help clinicians move from intuitive guesswork to useful data for better clinical decisions.
                     <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a> | 
                     <a href="https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awaf343/8253752" target="_blank">[Paper]</a> | 
                     <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
                 </li>
                 <li>
-                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Testing AI on curated datasets like clinical vignettes and case reports is not scalable. Conversely, many large-scale generative AI approaches are "black boxes" with limited control over the case mix, inheriting biases from training data while still relying on sensitive patient records. My work is developing lightweight, targeted methods to automatically pair realistically 'messy' clinical data with precisely-characterised 'ground truth' labels. This allows us to strategically expand the test distribution beyond the 'average' patient to include atypical 'edge' cases who are usually excluded, underrepresented, or not considered, probing for failures at scales far larger than is possible with current approaches.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> To safely implement any new clinical technology, we must uncover its vulnerabilities before exposing patients to them. However, our current methods for this validation are themselves limited. Raw patient data is sensitive and lacks a consistent verifiable 'ground truth'. Generative 'black box' models built from it inherit biases and still rely on private records. Conversely, manually curated case studies and clinical vignettes are usually unrealistically 'clean' and cannot scale. I am developing lightweight tools to automatically generate large amounts of realistically messy synthetic data, each paired with a perfect set of 'ground-truth' labels grounded in established clinical guidelines and diagnostic criteria. This creates a safe sandbox to move beyond the 'average' patient and strategically probe for failures in the atypical 'edge cases' where tools are most likely to break, thereby enabling rigorous validation at scale, without requiring a single piece of real patient data.
                 </li>
                 <li>
                     <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, and understanding the data requirements and collection practices necessary for this to be possible.
