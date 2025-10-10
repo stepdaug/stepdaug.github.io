@@ -3,63 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Academic Page</title>
+    <title>Stephen Auger - Personal Academic Page</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.7;
             color: #333;
             max-width: 800px;
             margin: 40px auto;
             padding: 0 20px;
-            background-color: #fdfdfd;
+            background-color: #fcfcfc;
         }
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             font-weight: 300;
             margin-bottom: 10px;
         }
+        .subtitle {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
         .sleek-line {
             border: 0;
-            height: 1px;
-            background: #ccc;
-            width: 100px;
+            height: 1.5px;
+            background: #ddd;
+            width: 150px;
             margin: 0 auto;
+        }
+        .profile-links {
+            margin-top: 25px;
         }
         section {
             margin-bottom: 40px;
         }
         h2 {
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 500;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         ul {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
         li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         a {
-            color: #007bff;
+            color: #0056b3;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
         }
         a:hover {
-            color: #0056b3;
+            color: #007bff;
             text-decoration: underline;
+        }
+        .publication-authors {
+            font-weight: normal;
+        }
+        .publication-details {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95em;
         }
         footer {
             text-align: center;
             margin-top: 60px;
-            color: #777;
+            color: #888;
             font-size: 0.9em;
         }
     </style>
@@ -67,39 +85,125 @@
 <body>
 
     <header>
-        <h1>Your Name</h1>
+        <h1>Stephen D. Auger</h1>
+        <p class="subtitle">NIHR Academic Clinical Lecturer in Neurology</p>
         <hr class="sleek-line">
+        <div class="profile-links">
+            <a href="https://profiles.imperial.ac.uk/s.auger21" target="_blank">Imperial College Profile</a> | 
+            <a href="https://scholar.google.co.uk/citations?user=4WU8qVQAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        </div>
     </header>
 
     <main>
-        <section id="about">
-            <h2>About</h2>
+        <section id="summary">
+            <h2>Professional Summary</h2>
             <p>
-                Here you can write a brief description about yourself. Talk about your research interests, your current position, and any other relevant information you'd like to share. This is a great place to give visitors a quick overview of your academic and professional background.
+                I am an NIHR Academic Clinical Lecturer in Neurology at Imperial College London, dividing my time between clinical practice and research into what I term 'Dataology'—diagnosing and managing disorders of clinical data. While sophisticated data analysis tools proliferate in science, clinical care often relies on crude data practices and subjective reports. This creates a critical 'analytical gap' between measurement and management.
+            </p>
+            <p>
+                My work focuses on bridging this gap by developing openly accessible tools that transform raw patient data into actionable clinical insights. By improving how we collect, analyse, and apply data, we can move beyond "intuition" and toward truly personalised care.
             </p>
         </section>
-
-        <section id="work">
-            <h2>Selected Work</h2>
+        
+        <section id="current-work">
+            <h2>Current Work & Interests</h2>
+            <p>My recent work uses simulation and synthetic data to explore and inform better data practices in clinical care.</p>
             <ul>
                 <li>
-                    <a href="https://www.example.com/publication1" target="_blank">Title of Your First Publication or Project</a><br>
-                    A brief description of the work and your contribution. Published in *Journal of Important Research*, 2024.
+                    <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, ensuring more patients receive effective treatments. 
+                    <a href="https://www.medrxiv.org/content/10.1101/2024.10.09.24315155v2" target="_blank">[Preprint Link]</a>
                 </li>
                 <li>
-                    <a href="https://www.example.com/project2" target="_blank">Name of a Technical Project or Paper</a><br>
-                    A short summary of this project, highlighting the key technologies or methodologies used.
+                    <strong>Quantifying Individual Treatment Effects:</strong> Developing a framework and companion web application to help clinicians move from intuitive guesswork to useful data for better clinical decisions.
+                    <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a>
                 </li>
                 <li>
-                    <a href="https://www.example.com/publication3" target="_blank">Another Significant Piece of Work</a><br>
-                    Describe this work and its impact or the findings you presented.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Creating empirically-grounded synthetic neurological data. This approach aims to provide the benefits of scalability and privacy while avoiding the biases inherent in many generative models, using lightweight, targeted methods.
+                </li>
+            </ul>
+        </section>
+        
+        <section id="selected-work">
+            <h2>Selected Tools & Guides</h2>
+             <ul>
+                <li>
+                    <a href="https://epilepsy.streamlit.app/" target="_blank">Epilepsy Consultation Webtool</a><br>
+                    A tool to assist with documentation and information presentation in epilepsy consultations.
+                </li>
+                <li>
+                    <a href="https://stepdaug-clinical-plots-streamlit-plot-h5drxe.streamlit.app/" target="_blank">Clinical Data Plotter</a><br>
+                    A visualisation tool to easily see relationships between lab data, observations, and treatment timings.
+                </li>
+                <li>
+                    <a href="https://practneurol.bmj.com/content/21/5/383" target="_blank">Big data, machine learning and artificial intelligence: a neurologist’s guide</a><br>
+                    <span class="publication-authors">Auger SD, Jacobs BM, Dobson R, Marshall CR, Noyce AJ.</span> <span class="publication-details">Practical Neurology, 2021.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <h3>Post-doctoral Research (Queen Mary University of London)</h3>
+            <ul>
+                <li>
+                    <span class="publication-authors">Bestwick J*, Auger SD*, Simonet C, et al.</span>
+                    Improving estimation of Parkinson’s disease risk—the enhanced PREDICT-PD algorithm.
+                    <span class="publication-details">npj Parkinson's Disease. 2021.</span>
+                    <a href="https://www.nature.com/articles/s41531-021-00236-4" target="_blank">[Link]</a>
+                </li>
+                 <li>
+                    <span class="publication-authors">Bestwick J, Auger SD, Schrag AE, et al.</span>
+                    Optimising classification of Parkinson’s disease based on motor, olfactory, neuropsychiatric and sleep features.
+                    <span class="publication-details">npj Parkinson's Disease. 2021.</span>
+                     <a href="https://www.nature.com/articles/s41531-021-00171-4" target="_blank">[Link]</a>
+                </li>
+                 <li>
+                    <span class="publication-authors">Auger SD, Kanavou S, Lawton M, et al.</span>
+                    Testing shortened versions of smell tests to screen for hyposmia in Parkinson’s disease.
+                    <span class="publication-details">Movement Disorders Clinical Practice, 2020.</span>
+                     <a href="https://movementdisorders.onlinelibrary.wiley.com/doi/abs/10.1002/mdc3.13028" target="_blank">[Link]</a>
+                </li>
+                 <li>
+                    <span class="publication-authors">Joseph T*, Auger SD*, Peress L, et al.</span>
+                    Screening performance of abbreviated versions of the UPSIT smell test.
+                    <span class="publication-details">Journal of Neurology, 2019.</span>
+                    <a href="https://link.springer.com/article/10.1007/s00415-019-09439-0" target="_blank">[Link]</a>
+                </li>
+            </ul>
+
+            <h3>PhD Research (University College London)</h3>
+            <ul>
+                <li>
+                    <span class="publication-authors">Auger SD & Maguire EA.</span>
+                    Retrosplenial cortex indexes stability beyond the spatial domain.
+                    <span class="publication-details">Journal of Neuroscience, 2018.</span>
+                    <a href="https://www.jneurosci.org/content/38/19/4594" target="_blank">[Link]</a>
+                </li>
+                <li>
+                    <span class="publication-authors">Auger SD & Maguire EA.</span>
+                    Dissociating Landmark Stability from Orienting Value Using Functional Magnetic Resonance Imaging.
+                    <span class="publication-details">Journal of Cognitive Neuroscience, 2018.</span>
+                     <a href="https://www.mitpressjournals.org/doi/abs/10.1162/jocn_a_01222" target="_blank">[Link]</a>
+                </li>
+                <li>
+                    <span class="publication-authors">Auger SD, Zeidman P & Maguire EA.</span>
+                    A central role for the retrosplenial cortex in de novo environmental learning.
+                    <span class="publication-details">eLife, 2015.</span>
+                    <a href="https://elifesciences.org/articles/09082" target="_blank">[Link]</a>
+                </li>
+                 <li>
+                    <span class="publication-authors">Auger SD, Mullally SL & Maguire EA.</span>
+                    Retrosplenial cortex codes for permanent landmarks.
+                    <span class="publication-details">PLoS One, 2012.</span>
+                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0043620" target="_blank">[Link]</a>
                 </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Stephen D. Auger. All rights reserved.</p>
     </footer>
 
 </body>
