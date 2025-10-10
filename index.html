@@ -49,6 +49,18 @@
             padding-bottom: 10px;
             margin-bottom: 25px;
         }
+        h3 {
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+        .section-subtitle {
+            font-size: 1em;
+            font-weight: 400;
+            color: #555;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
         ul {
             list-style: none;
             padding-left: 0;
@@ -85,23 +97,24 @@
 <body>
 
     <header>
-        <h1>Stephen D. Auger</h1>
+        <h1>Stephen Auger</h1>
         <p class="subtitle">NIHR Academic Clinical Lecturer in Neurology</p>
         <hr class="sleek-line">
         <div class="profile-links">
             <a href="https://profiles.imperial.ac.uk/s.auger21" target="_blank">Imperial College Profile</a> | 
-            <a href="https://scholar.google.co.uk/citations?user=4WU8qVQAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a href="https://scholar.google.co.uk/citations?user=4WU8qVQAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+            <a href="https://github.com/stepdaug" target="_blank">GitHub</a>
         </div>
     </header>
 
     <main>
-        <section id="summary">
-            <h2>Professional Summary</h2>
+        <section id="about">
+            <h2>About</h2>
             <p>
-                I am an NIHR Academic Clinical Lecturer in Neurology at Imperial College London, dividing my time between clinical practice and research into what I term 'Dataology'—diagnosing and managing disorders of clinical data. While sophisticated data analysis tools proliferate in science, clinical care often relies on crude data practices and subjective reports. This creates a critical 'analytical gap' between measurement and management.
+                I am an NIHR Academic Clinical Lecturer in Neurology at Imperial College London, with a research focus in what I loosely term 'Dataology': the diagnosis and management of clinical data disorders. My work addresses the critical 'analytical gap' between the data we collect from patients and the actionable insights needed to reliably inform clinical decisions. This challenge is becoming increasingly urgent with the dawn of AI in healthcare.
             </p>
             <p>
-                My work focuses on bridging this gap by developing openly accessible tools that transform raw patient data into actionable clinical insights. By improving how we collect, analyse, and apply data, we can move beyond "intuition" and toward truly personalised care.
+                A key focus of my work is developing tools to both improve current data practices and create safe 'sandbox' environments for future clinical AI. By creating robust synthetic data, we can rigorously test, validate, and understand AI systems—finding their flaws and failure modes, before patients or their data are exposed to them.
             </p>
         </section>
         
@@ -110,15 +123,18 @@
             <p>My recent work uses simulation and synthetic data to explore and inform better data practices in clinical care.</p>
             <ul>
                 <li>
-                    <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, ensuring more patients receive effective treatments. 
-                    <a href="https://www.medrxiv.org/content/10.1101/2024.10.09.24315155v2" target="_blank">[Preprint Link]</a>
-                </li>
-                <li>
                     <strong>Quantifying Individual Treatment Effects:</strong> Developing a framework and companion web application to help clinicians move from intuitive guesswork to useful data for better clinical decisions.
-                    <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a>
+                    <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a> | 
+                    <a href="https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awaf343/8253752" target="_blank">[Brain Paper]</a> | 
+                    <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
                 </li>
                 <li>
-                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Creating empirically-grounded synthetic neurological data. This approach aims to provide the benefits of scalability and privacy while avoiding the biases inherent in many generative models, using lightweight, targeted methods.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Testing AI on curated datasets like clinical vignettes is not scalable. Conversely, many large-scale generative AI approaches are "black boxes" with little control over the case mix, inheriting biases from training data while still relying on sensitive patient records. My work develops lightweight, targeted methods to automatically pair realistically 'messy' clinical data with precisely-characterised 'ground truth' labels. This allows us to strategically expand the test distribution beyond the 'average' patient to include atypical 'edge' cases who are usually excluded, underrepresented, or not considered, probing for failures at scales far larger than is possible with current approaches.
+                </li>
+                <li>
+                    <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, and understanding the data requirements and collection practices necessary for this to be possible.
+                    <a href="https://www.medrxiv.org/content/10.1101/2024.10.09.24315155v2" target="_blank">[Preprint Link]</a> | 
+                    <a href="https://github.com/stepdaug/ML-and-clinical-phenotyping" target="_blank">[Code]</a>
                 </li>
             </ul>
         </section>
@@ -126,6 +142,10 @@
         <section id="selected-work">
             <h2>Selected Tools & Guides</h2>
              <ul>
+                 <li>
+                    <a href="https://practneurol.bmj.com/content/21/5/383" target="_blank">Big data, machine learning and artificial intelligence: a neurologist’s guide</a><br>
+                    <span class="publication-authors">Auger SD, Jacobs BM, Dobson R, Marshall CR, Noyce AJ.</span> <span class="publication-details">Practical Neurology, 2021.</span>
+                </li>
                 <li>
                     <a href="https://epilepsy.streamlit.app/" target="_blank">Epilepsy Consultation Webtool</a><br>
                     A tool to assist with documentation and information presentation in epilepsy consultations.
@@ -134,22 +154,19 @@
                     <a href="https://stepdaug-clinical-plots-streamlit-plot-h5drxe.streamlit.app/" target="_blank">Clinical Data Plotter</a><br>
                     A visualisation tool to easily see relationships between lab data, observations, and treatment timings.
                 </li>
-                <li>
-                    <a href="https://practneurol.bmj.com/content/21/5/383" target="_blank">Big data, machine learning and artificial intelligence: a neurologist’s guide</a><br>
-                    <span class="publication-authors">Auger SD, Jacobs BM, Dobson R, Marshall CR, Noyce AJ.</span> <span class="publication-details">Practical Neurology, 2021.</span>
-                </li>
             </ul>
         </section>
 
         <section id="publications">
             <h2>Publications</h2>
             
-            <h3>Post-doctoral Research (Queen Mary University of London)</h3>
+            <h3>Post-doctoral Research</h3>
+            <p class="section-subtitle">During clinical foundation and core medical training – risk prediction in Parkinson's disease in a large cohort.</p>
             <ul>
                 <li>
                     <span class="publication-authors">Bestwick J*, Auger SD*, Simonet C, et al.</span>
                     Improving estimation of Parkinson’s disease risk—the enhanced PREDICT-PD algorithm.
-                    <span class="publication-details">npj Parkinson's Disease. 2021.</span>
+                    <span class="publication-details">npj Parkinson's Disease. 2021. (*equal contribution).</span>
                     <a href="https://www.nature.com/articles/s41531-021-00236-4" target="_blank">[Link]</a>
                 </li>
                  <li>
@@ -167,12 +184,13 @@
                  <li>
                     <span class="publication-authors">Joseph T*, Auger SD*, Peress L, et al.</span>
                     Screening performance of abbreviated versions of the UPSIT smell test.
-                    <span class="publication-details">Journal of Neurology, 2019.</span>
+                    <span class="publication-details">Journal of Neurology, 2019. (*equal contribution).</span>
                     <a href="https://link.springer.com/article/10.1007/s00415-019-09439-0" target="_blank">[Link]</a>
                 </li>
             </ul>
 
-            <h3>PhD Research (University College London)</h3>
+            <h3>PhD Research</h3>
+            <p class="section-subtitle">During medical school (UCL MBPhD), supervised by Prof Eleanor Maguire. Investigating the retrosplenial cortex's role in human memory and navigation using fMRI, virtual simulation, and machine learning.</p>
             <ul>
                 <li>
                     <span class="publication-authors">Auger SD & Maguire EA.</span>
@@ -188,9 +206,27 @@
                 </li>
                 <li>
                     <span class="publication-authors">Auger SD, Zeidman P & Maguire EA.</span>
+                    Efficacy of navigation may be influenced by retrosplenial cortex-mediated learning of landmark stability.
+                    <span class="publication-details">Neuropsychologia, 2017.</span>
+                    <a href="https://doi.org/10.1016/j.neuropsychologia.2017.03.010" target="_blank">[Link]</a>
+                </li>
+                <li>
+                    <span class="publication-authors">Auger SD, Zeidman P & Maguire EA.</span>
                     A central role for the retrosplenial cortex in de novo environmental learning.
                     <span class="publication-details">eLife, 2015.</span>
                     <a href="https://elifesciences.org/articles/09082" target="_blank">[Link]</a>
+                </li>
+                <li>
+                    <span class="publication-authors">Kahan J & Auger SD.</span>
+                    Functional magnetic resonance imaging.
+                    <span class="publication-details">British Journal of Hospital Medicine, 2015.</span>
+                    <a href="https://doi.org/10.12968/hmed.2015.76.7.C108" target="_blank">[Link]</a>
+                </li>
+                <li>
+                    <span class="publication-authors">Auger SD & Maguire EA.</span>
+                    Assessing the mechanism of response in the retrosplenial cortex of good and poor navigators.
+                    <span class="publication-details">Cortex, 2013.</span>
+                    <a href="https://doi.org/10.1016/j.cortex.2012.07.009" target="_blank">[Link]</a>
                 </li>
                  <li>
                     <span class="publication-authors">Auger SD, Mullally SL & Maguire EA.</span>
@@ -198,12 +234,18 @@
                     <span class="publication-details">PLoS One, 2012.</span>
                     <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0043620" target="_blank">[Link]</a>
                 </li>
+                <li>
+                    <span class="publication-authors">Auger, S.</span>
+                    What is the function of the human retrosplenial cortex?
+                    <span class="publication-details">PhD Thesis, University College London, 2015.</span>
+                    <a href="https://discovery.ucl.ac.uk/id/eprint/1456771/" target="_blank">[Link]</a>
+                </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Stephen D. Auger. All rights reserved.</p>
+        <p>&copy; 2025 Stephen Auger | Last updated: October 2025</p>
     </footer>
 
 </body>
