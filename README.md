@@ -1,2 +1,0 @@
-# stepdaug.github.io
-Webpage
