@@ -13,11 +13,28 @@
             margin: 40px auto;
             padding: 0 20px;
             background-color: #fcfcfc;
+            position: relative; /* Needed for image positioning */
         }
         header {
             text-align: center;
             margin-bottom: 50px;
+            padding-top: 40px; /* Add padding to avoid content overlapping image on mobile */
         }
+        /* --- Profile Image Styles --- */
+        .profile-image-container {
+            position: absolute;
+            top: 45px;
+            right: 45px;
+        }
+        .profile-image-container img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Prevents image distortion */
+            border: 4px solid #f0f0f0; /* Optional border */
+        }
+        /* --- End Profile Image Styles --- */
+
         h1 {
             font-size: 2.8em;
             font-weight: 300;
@@ -92,9 +109,31 @@
             color: #888;
             font-size: 0.9em;
         }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 800px) {
+            .profile-image-container {
+                position: static; /* Revert to normal document flow */
+                display: block;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .profile-image-container img {
+                width: 150px; /* Slightly larger for mobile focus */
+                height: 150px;
+            }
+            header {
+                padding-top: 0; /* Remove top padding on mobile */
+            }
+        }
     </style>
 </head>
 <body>
+    
+    <div class="profile-image-container">
+        <!-- Make sure 'profile.jpg' matches your uploaded image file name -->
+        <img src="profile.jpg" alt="Stephen Auger">
+    </div>
 
     <header>
         <h1>Stephen Auger</h1>
@@ -114,7 +153,7 @@
                 I am an NIHR Academic Clinical Lecturer in Neurology at Imperial College London, with a research focus in what I loosely term 'Dataology': the diagnosis and management of clinical data disorders. My work addresses the critical 'analytical gap' between the data we collect from patients and the actionable insights needed to reliably inform clinical decisions. This challenge is becoming increasingly urgent with the dawn of AI in healthcare.
             </p>
             <p>
-                A key focus of my work is developing tools to both improve current data practices and create safe 'sandbox' environments for future clinical AI. By creating robust synthetic data, we can rigorously test, validate, and understand AI systems—finding their flaws and failure modes, before patients or their data are exposed to them.
+                A key focus of my work is developing tools to both improve current data practices and create safe 'sandbox' environments for future clinical AI. By creating robust synthetic data, we can rigorously test, validate, and understand AI systems; finding their flaws and failure modes before patients or their data are exposed to them.
             </p>
         </section>
         
@@ -129,7 +168,7 @@
                     <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
                 </li>
                 <li>
-                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Testing AI on curated datasets like clinical vignettes is not scalable. Conversely, many large-scale generative AI approaches are "black boxes" with little control over the case mix, inheriting biases from training data while still relying on sensitive patient records. My work develops lightweight, targeted methods to automatically pair realistically 'messy' clinical data with precisely-characterised 'ground truth' labels. This allows us to strategically expand the test distribution beyond the 'average' patient to include atypical 'edge' cases who are usually excluded, underrepresented, or not considered, probing for failures at scales far larger than is possible with current approaches.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> Testing AI on curated datasets like clinical vignettes and case reports is not scalable. Conversely, many large-scale generative AI approaches are "black boxes" with limited control over the case mix, inheriting biases from training data while still relying on sensitive patient records. My work is developing lightweight, targeted methods to automatically pair realistically 'messy' clinical data with precisely-characterised 'ground truth' labels. This allows us to strategically expand the test distribution beyond the 'average' patient to include atypical 'edge' cases who are usually excluded, underrepresented, or not considered, probing for failures at scales far larger than is possible with current approaches.
                 </li>
                 <li>
                     <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, and understanding the data requirements and collection practices necessary for this to be possible.
