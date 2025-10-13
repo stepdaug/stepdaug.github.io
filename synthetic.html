@@ -74,26 +74,23 @@
             font-size: 0.9em; 
         }
         
-        /* New styles for a clearer, more spacious layout */
         .content-section p {
-            margin-bottom: 1.2em; /* Adds space between paragraphs */
+            margin-bottom: 1.2em;
         }
-        .problem-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 30px;
+        .limitations-list {
+            list-style-type: disc;
+            padding-left: 25px;
+            margin-top: 5px;
         }
-        .problem-list li {
-            margin-bottom: 25px;
-            padding-left: 20px;
-            border-left: 3px solid #0056b3; /* Highlight color */
+        .limitations-list li {
+            margin-bottom: 20px;
         }
-        .problem-list strong {
+        .limitations-list strong {
             font-size: 1.1em;
             font-weight: 500;
             color: #333;
         }
-        .problem-list p {
+        .limitations-list p {
             margin: 5px 0 0 0;
             color: #555;
         }
@@ -121,14 +118,17 @@
         <section id="synthetic-data" class="content-section">
             <h2>Realistic Synthetic Clinical Data Generation</h2>
             <p>
-                An important step in developing safe and robust clinical AI is rigorous validation. However, the data currently available for testing new technologies presents significant challenges.
+                A critical step in developing safe clinical AI is rigorous validation. However, current data sources present significant challenges. There is growing evidence that public benchmarks may have already been 'seen' by large models during training, leading them to 'learn the test' rather than demonstrate true clinical reasoning.
             </p>
 
-            <h3>The Challenge with Existing Data Sources</h3>
-            <ul class="problem-list">
+            <ul class="limitations-list">
+                 <li>
+                    <strong>Data Contamination & Memorization</strong>
+                    <p>When public datasets are part of a model's training data, a high score may reflect memorization, not a genuine ability to generalize. This makes it difficult to know if a model truly 'understands' clinical problems.</p>
+                </li>
                 <li>
                     <strong>Real Patient Data</strong>
-                    <p>Is sensitive, difficult to access, and lacks a consistent, verifiable 'ground truth' to test an algorithm against.</p>
+                    <p>Is sensitive and difficult to access. It contains inherent biases, may not include the rare 'edge cases' needed for robust testing, and is limited by what has been collected, making it hard to validate performance on specific patient subtypes.</p>
                 </li>
                 <li>
                     <strong>Generative 'Black Box' Models</strong>
@@ -138,14 +138,18 @@
                     <strong>Manual Case Studies</strong>
                     <p>While useful, manually curated vignettes are often unrealistically 'clean' and cannot be produced at the scale needed for robust testing.</p>
                 </li>
+                <li>
+                    <strong>Data Contamination & Memorisation</strong>
+                    <p>When public datasets are part of a model's training data, a high score when tested may reflect memorisation of previously seen information, not a genuine ability to 'understand' clinical problems.</p>
+                </li>
             </ul>
 
             <h3>My Approach: A Ground-Truth Labeled Data Engine</h3>
             <p>
-                I am developing a novel engine to automate the generation of large amounts of realistically messy synthetic patient data. Each synthetic record is paired with a high-dimensional set of 'ground-truth' labels, all derived from the highest quality empirical sources of medical knowledge.
+                I am developing a novel engine that automates the generation of large volumes of realistically messy synthetic patient data. Each record is paired with a high-dimensional set of 'ground-truth' labels programmatically derived from high-quality empirical sources of medical knowledge, removing the need for laborious manual labeling by clinicians.
             </p>
             <p>
-                This approach creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, enabling rigorous and scalable validation without ever requiring a single piece of real patient data.
+                This approach creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break. Because each synthetic case is entirely unique, there is no risk of a model having 'seen' it before, ensuring a true and unbiased evaluation of its reasoning capabilities.
             </p>
         </section>
     </main>
