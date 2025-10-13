@@ -147,19 +147,15 @@
     </header>
 
     <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                I am a researcher at Imperial College London.
-            </p>
-            <p>
-                Real-world clinical data is messy. My research focuses on building tools to define and expand the boundary of what we can reliably infer from it. This capability is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations, exposing potential failures, and ultimately ensuring it is safe and robust before patients or their data are exposed to them.
-            </p>
-        </section>
-        
         <section id="current-work">
             <h2>Current Work & Interests</h2>
-            <p>My recent work uses simulation and synthetic data to explore ways of improving clinical data practices.</p>
+            <p>
+                I'm a researcher and neurology doctor at Imperial College London.
+            </p>
+            <p>
+                Real-world clinical data is messy in unique ways. I'm interested in making this messy data useful. To do this, we need to define the boundaries of what we can reliably infer from it, and then look to expand those boundaries where possible. This capability is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations, exposing potential failures, and ensuring it is safe and robust before patients or their data are exposed to them.
+            </p>
+            <p>I use simulation and synthetic data to explore and quantify improvements in clinical data practices.</p>
             <ul>
                 <li>
                     <strong>Quantifying Individual Treatment Effects:</strong> Framework and companion web app illustrating how clinicians could move from our current reliance upon intuitive guesswork to useful data for better clinical decisions.
@@ -168,7 +164,7 @@
                     <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
                 </li>
                 <li>
-                    <strong>Realistic Synthetic Clinical Data Generation:</strong> To safely implement any new clinical technology, we must uncover its vulnerabilities before exposing patients to them. Current methods for this validation are themselves limited. Raw patient data is sensitive and lacks a consistent verifiable 'ground truth'. Generative 'black box' models built from it inherit biases and still rely on private records. Conversely, manually curated case studies and clinical vignettes are usually unrealistically 'clean' and cannot scale. I am developing lightweight tools to automate generation of large amounts of realistically messy synthetic data, each paired with a perfect set of 'ground-truth' labels grounded in established clinical guidelines and diagnostic criteria. This creates a safe sandbox to strategically probe for failures in the atypical 'edge cases' where tools are most likely to break, thereby enabling rigorous validation at scale, without requiring a single piece of real patient data.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> To safely implement any new clinical technology, we must uncover vulnerabilities before exposing patients to them. Current methods for this validation are themselves limited: real-world patient data is sensitive and lacks a consistent verifiable 'ground truth'; generative 'black box' models built from patient data inherit its biases and still rely on accessing personal records; manually curated case studies and clinical vignettes are usually unrealistically 'clean' and cannot scale. I'm developing tools to automate generation of large amounts of realistically messy synthetic patient data (e.g. clinic letters, conversational transcripts), each paired with a perfect set of 'ground-truth' labels, grounded in established clinical guidelines and diagnostic criteria. This creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where tools are most likely to break, thereby enabling rigorous validation at scale, without requiring a single piece of real patient data.
                 </li>
                 <li>
                     <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, and understanding the data requirements and collection practices necessary for this to be possible.
