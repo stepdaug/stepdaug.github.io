@@ -4,20 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthetic Clinical Data Generation - Stephen Auger</title>
-    <!-- Paste the same <style> block from index.html here -->
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.7; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; background-color: #fcfcfc; }
-        header { text-align: center; margin-bottom: 30px; }
-        h1 { font-size: 2.8em; font-weight: 300; margin-bottom: 10px; }
-        .subtitle { font-size: 1.1em; color: #555; margin-top: 0; margin-bottom: 20px; }
-        nav { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        nav a { margin: 0 15px; font-weight: 500; color: #333; font-size: 1.05em; text-decoration: none; }
-        nav a:hover, nav a.active { color: #0056b3; }
-        h2 { font-size: 1.6em; font-weight: 500; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 25px; }
-        a { color: #0056b3; text-decoration: none; font-weight: 500; }
-        a:hover { color: #007bff; text-decoration: underline; }
-        footer { text-align: center; margin-top: 60px; color: #888; font-size: 0.9em; }
-        @media (max-width: 800px) { nav a { margin: 0 8px; } }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; 
+            line-height: 1.7; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            background-color: #fcfcfc; 
+        }
+        header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        h1 { 
+            font-size: 2.8em; 
+            font-weight: 300; 
+            margin-bottom: 10px; 
+        }
+        .subtitle { 
+            font-size: 1.1em; 
+            color: #555; 
+            margin-top: 0; 
+            margin-bottom: 20px; 
+        }
+        nav { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 15px; 
+        }
+        nav a { 
+            margin: 0 15px; 
+            font-weight: 500; 
+            color: #333; 
+            font-size: 1.05em; 
+            text-decoration: none; 
+        }
+        nav a:hover, nav a.active { 
+            color: #0056b3; 
+        }
+        h2 { 
+            font-size: 1.6em; 
+            font-weight: 500; 
+            border-bottom: 1px solid #eee; 
+            padding-bottom: 10px; 
+            margin-bottom: 25px; 
+        }
+        h3 {
+            font-size: 1.3em;
+            font-weight: 500;
+            margin-top: 40px;
+            color: #333;
+        }
+        a { 
+            color: #0056b3; 
+            text-decoration: none; 
+            font-weight: 500; 
+        }
+        a:hover { 
+            color: #007bff; 
+            text-decoration: underline; 
+        }
+        footer { 
+            text-align: center; 
+            margin-top: 60px; 
+            color: #888; 
+            font-size: 0.9em; 
+        }
+        
+        /* New styles for a clearer, more spacious layout */
+        .content-section p {
+            margin-bottom: 1.2em; /* Adds space between paragraphs */
+        }
+        .problem-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 30px;
+        }
+        .problem-list li {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 3px solid #0056b3; /* Highlight color */
+        }
+        .problem-list strong {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #333;
+        }
+        .problem-list p {
+            margin: 5px 0 0 0;
+            color: #555;
+        }
+
+        @media (max-width: 800px) { 
+            nav a { margin: 0 8px; } 
+        }
     </style>
 </head>
 <body>
@@ -35,12 +118,35 @@
     </nav>
 
     <main>
-        <section id="synthetic-data">
+        <section id="synthetic-data" class="content-section">
             <h2>Realistic Synthetic Clinical Data Generation</h2>
             <p>
-                I'm developing a novel engine to automate the generation of large amounts of realistically messy synthetic patient data. This creates a safe 'sandbox' to strategically probe for failures in atypical 'edge cases' where AI tools are most likely to break, enabling rigorous validation without requiring access to real patient data.
+                An important step in developing safe and robust clinical AI is rigorous validation. However, the data currently available for testing new technologies presents significant challenges.
             </p>
-            <!-- You can add more details, progress updates, or links related to this project here -->
+
+            <h3>The Challenge with Existing Data Sources</h3>
+            <ul class="problem-list">
+                <li>
+                    <strong>Real Patient Data</strong>
+                    <p>Is sensitive, difficult to access, and lacks a consistent, verifiable 'ground truth' to test an algorithm against.</p>
+                </li>
+                <li>
+                    <strong>Generative 'Black Box' Models</strong>
+                    <p>Models trained on real data inherit its biases and limitations, and their use still relies on accessing sensitive personal records.</p>
+                </li>
+                <li>
+                    <strong>Manual Case Studies</strong>
+                    <p>While useful, manually curated vignettes are often unrealistically 'clean' and cannot be produced at the scale needed for robust testing.</p>
+                </li>
+            </ul>
+
+            <h3>My Approach: A Ground-Truth Labeled Data Engine</h3>
+            <p>
+                I am developing a novel engine to automate the generation of large amounts of realistically messy synthetic patient data. Each synthetic record is paired with a high-dimensional set of 'ground-truth' labels, all derived from the highest quality empirical sources of medical knowledge.
+            </p>
+            <p>
+                This approach creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, enabling rigorous and scalable validation without ever requiring a single piece of real patient data.
+            </p>
         </section>
     </main>
 
