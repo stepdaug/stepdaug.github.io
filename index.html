@@ -13,29 +13,26 @@
             margin: 40px auto;
             padding: 0 20px;
             background-color: #fcfcfc;
-            position: relative; /* Needed for image positioning */
+            position: relative;
         }
         header {
             text-align: center;
-            margin-bottom: 50px;
-            padding-top: 40px; /* Add padding to avoid content overlapping image on mobile */
+            margin-bottom: 30px; /* Reduced margin */
+            padding-top: 40px;
         }
-        /* --- Profile Image Styles --- */
         .profile-image-container {
             position: absolute;
-            top: 95px; /* Increased from 45px to lower the image */
-            right: 35px; /* Decreased from 45px to move it right */
+            top: 95px;
+            right: 35px;
         }
         .profile-image-container img {
             width: 130px;
             height: 130px;
-            border-radius: 50%; /* Makes the image circular */
-            object-fit: cover; /* Prevents image distortion */
-            object-position: 50% 60%; /* Adjusts the image inside the circle */
-            border: 4px solid #f0f0f0; /* Optional border */
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: 50% 60%;
+            border: 4px solid #f0f0f0;
         }
-        /* --- End Profile Image Styles --- */
-
         h1 {
             font-size: 2.8em;
             font-weight: 300;
@@ -56,6 +53,22 @@
         }
         .profile-links {
             margin-top: 25px;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        nav a {
+            margin: 0 15px;
+            font-weight: 500;
+            color: #333;
+            font-size: 1.05em;
+        }
+        nav a:hover, nav a.active {
+            color: #0056b3;
+            text-decoration: none;
         }
         section {
             margin-bottom: 40px;
@@ -110,21 +123,22 @@
             color: #888;
             font-size: 0.9em;
         }
-
-        /* Responsive styles for mobile */
         @media (max-width: 800px) {
             .profile-image-container {
-                position: static; /* Revert to normal document flow */
+                position: static;
                 display: block;
                 text-align: center;
                 margin-bottom: 30px;
             }
             .profile-image-container img {
-                width: 150px; /* Slightly larger for mobile focus */
+                width: 150px;
                 height: 150px;
             }
             header {
-                padding-top: 0; /* Remove top padding on mobile */
+                padding-top: 0;
+            }
+            nav a {
+                margin: 0 8px; /* Reduce spacing on mobile */
             }
         }
     </style>
@@ -146,6 +160,14 @@
         </div>
     </header>
 
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="effects.html">Treatment Effects</a>
+        <a href="synthetic.html">Synthetic Data</a>
+        <a href="ml.html">Machine Learning</a>
+        <a href="neurotools.html">Neuro Tools</a>
+    </nav>
+
     <main>
         <section id="About">
             <h2>About</h2>
@@ -153,8 +175,10 @@
                 I'm a researcher and neurology doctor at Imperial College London.
             </p>
             <p>
-                My research focuses on extracting reliable insights from complex and often challenging clinical data. I develop methods to define the boundaries of what can be confidently inferred from this information before working to expand those limits. This is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations, exposing potential failures, and ultimately ensuring they are safe and robust before exposing them to patients or their data.
+                I'm interested in improving our ability to derive reliable insights from unstructured, fragmented, and disparate clinical data. I develop methods to define the boundaries of what we can confidently infer from information before working to expand those boundaries. This is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations to ensure they are robust before ever exposing them to patients or their data.
             </p>
+        </section>
+
         <section id="current-work">
             <h2>Current Work & Interests</h2>
             <p>I use simulation and synthetic data to quantify potential improvements we could realise from better clinical data practices.</p>
