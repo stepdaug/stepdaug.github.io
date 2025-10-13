@@ -150,21 +150,24 @@
         <section id="current-work">
             <h2>Current Work & Interests</h2>
             <p>
-                I'm a researcher and neurology doctor at Imperial College London.
+                I am a researcher and neurology doctor at Imperial College London.
             </p>
             <p>
-                Real-world clinical data is messy in unique ways. I'm interested in making this messy data useful. To do this, we need to define the boundaries of what we can reliably infer from it, and then look to expand those boundaries where possible. This capability is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations, exposing potential failures, and ensuring it is safe and robust before patients or their data are exposed to them.
+                Real-world clinical data is messy in unique ways. I am interested in making this messy data useful.
             </p>
-            <p>I use simulation and synthetic data to explore and quantify improvements in clinical data practices.</p>
+            <p>    
+                This requires us to define the boundaries of what we can reliably infer from clinical data, before looking to expand those boundaries where possible. This capability is especially important as we enter the era of clinical AI, where understanding these boundaries is essential for probing an algorithm's limitations, exposing potential failures, and ensuring it is safe and robust before patients or their data are exposed to them.
+            </p>
+            <p>I use simulation and synthetic data to explore ways of improving clinical data practices. Recent work includes:</p>
             <ul>
                 <li>
-                    <strong>Quantifying Individual Treatment Effects:</strong> Framework and companion web app illustrating how clinicians could move from our current reliance upon intuitive guesswork to useful data for better clinical decisions.
+                    <strong>Quantifying Individual Treatment Effects:</strong> Framework and companion web app illustrating how clinicians could move from our current reliance upon intuitive guesswork to useful data for better clinical decisions. Further work is currently expanding this initial proof-of-principle to a much larger scale.
                     <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a> | 
                     <a href="https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awaf343/8253752" target="_blank">[Paper]</a> | 
                     <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
                 </li>
                 <li>
-                    <strong>Realistic Synthetic Clinical Data Generation:</strong> To safely implement any new clinical technology, we must uncover vulnerabilities before exposing patients to them. Current methods for this validation are themselves limited: real-world patient data is sensitive and lacks a consistent verifiable 'ground truth'; generative 'black box' models built from patient data inherit its biases and still rely on accessing personal records; manually curated case studies and clinical vignettes are usually unrealistically 'clean' and cannot scale. I'm developing tools to automate generation of large amounts of realistically messy synthetic patient data (e.g. clinic letters, conversational transcripts), each paired with a perfect set of 'ground-truth' labels, grounded in established clinical guidelines and diagnostic criteria. This creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where tools are most likely to break, thereby enabling rigorous validation at scale, without requiring a single piece of real patient data.
+                    <strong>Realistic Synthetic Clinical Data Generation:</strong> The current methods and data available for validating new clinical technologies have several limitations: real-world patient data is sensitive and lacks a consistent verifiable 'ground truth'; generative 'black box' models built from this patient data inherit its biases and still rely on accessing personal records; whereas manually curated case studies and clinical vignettes are usually unrealistically 'clean' and cannot scale efficiently. I am developing a novel software engine to automate generation of large amounts of realistically messy synthetic patient data, each paired with a high-dimensional perfect set of 'ground-truth' labels. My initial focus is on neurology, where I have deepest understanding of what constitutes 'realistic' clinical data, and know the highest quality empirical source data to ground the process within for each subspecialty. This will create a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where tools are most likely to break, thereby enabling rigorous validation at scale, without requiring a single piece of real patient data.
                 </li>
                 <li>
                     <strong>Machine Learning to Uncover Hidden Treatment Responses:</strong> Demonstrating how ML can detect complex patterns in clinical trial data that traditional analyses miss, and understanding the data requirements and collection practices necessary for this to be possible.
@@ -192,11 +195,11 @@
             </ul>
         </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
+        <section id="Previous research">
+            <h2>Previous research</h2>
             
-            <h3>Post-doctoral Research</h3>
-            <p class="section-subtitle">During clinical foundation and core medical training – risk prediction in Parkinson's disease in a large cohort.</p>
+            <h3>Post-doctoral</h3>
+            <p class="section-subtitle">Risk prediction modelling in Parkinson's disease. Here I learned about the requirements for making useful inference from clinical data. Supervised by Prof Alastair Noyce (Prentive Neurology Unit, Queen Mary University London), during my clinical foundation and core medical training.</p>
             <ul>
                 <li>
                     <span class="publication-authors">Bestwick J*, Auger SD*, Simonet C, et al.</span>
@@ -224,8 +227,8 @@
                 </li>
             </ul>
 
-            <h3>PhD Research</h3>
-            <p class="section-subtitle">During medical school (UCL MBPhD), supervised by Prof Eleanor Maguire. Investigating the retrosplenial cortex's role in human memory and navigation using fMRI, virtual simulation, and machine learning.</p>
+            <h3>PhD research</h3>
+            <p class="section-subtitle">Using virtual simulation, fMRI and machine learning to investigatie the retrosplenial cortex's role in human memory and navigation. Here I learned about making reliable inference from 'messy' human behavioural data, and the power of different forms of simulation paired with machine learning to facilitate this. Supervised by Prof Eleanor Maguire during medical school (UCL, MBPhD).</p>
             <ul>
                 <li>
                     <span class="publication-authors">Auger SD & Maguire EA.</span>
