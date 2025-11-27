@@ -134,34 +134,28 @@
         <section id="synthetic-data" class="content-section">
             <h2>Realistic Synthetic Clinical Data Generation</h2>
             <p>
-                An important step in developing safe clinical AI and algorithms is rigorous validation. However, current data sources present significant challenges.
+                Despite achieving superhuman scores on static exams, the deployment of medical AI is currently stalled by what I see as three structural barriers:
             </p>
 
             <ul class="limitations-list">
                 <li>
-                    <strong>Real Patient Data</strong>
-                    <p>Is sensitive and difficult to access. It contains inherent biases, may not include the rare 'edge cases' needed for robust testing, and is limited by what has been collected, making it hard to validate performance on specific patient subtypes.</p>
+                    <strong>The Data Trap</strong>
+                    <p>Real-world health data is ostensibly abundant but functionally inaccessible. This is due to privacy silos and intrinsic noise within the data. It also lacks absolute "ground truth" - labels in electronic healthcare records are often delayed, inferred, or debated by experts; making them unreliable for rigorous model grading.</p>
                 </li>
                 <li>
-                    <strong>Generative Models</strong>
-                    <p>Models trained on real data inherit its biases and limitations. Their 'black box' nature makes it difficult to understand and steer their output when this is required, and their use still relies upon accessing sensitive personal records.</p>
+                    <strong>The "Long Tail" Blind Spot</strong>
+                    <p>AI models fail most catastrophically on edge cases which sit outside of the data distributions they were trained with - things like rare comorbidities, and atypical presentations. Because these scenarios appear too infrequently in historical datasets, we are currently 'flying blind' regarding model performance on complex or atypical cases.</p>
                 </li>
                 <li>
-                    <strong>Manual Case Studies</strong>
-                    <p>While useful, manually curated vignettes are often unrealistically 'clean' and cannot be produced at the scale needed for robust testing.</p>
-                </li>
-                <li>
-                    <strong>Data Contamination & Memorisation</strong>
-                    <p>There is growing evidence that public benchmarks and case records may have already been 'seen' by large models during training, leading them to 'learn the test' rather than demonstrate true clinical reasoning.</p>
+                    <strong>The Scalability Wall</strong>
+                    <p>The current gold standard for safety is review by human physicians. This approach is not possible to scale meaningfully. It is impossible to hire enough doctors to manually audit the millions of permutations required to guarantee safety across all clinical variables.</p>
                 </li>
             </ul>
-
-            <h3>My Approach: A ground-truth labeled data engine</h3>
             <p>
-                I am developing a novel engine that automates the generation of large volumes of realistically messy synthetic patient data. Each record is paired with a high-dimensional set of 'ground-truth' labels programmatically derived from high-quality empirical sources of medical knowledge, removing the need for laborious manual labeling by clinicians.
+                To address this, I'm developing an engine that automates the creation of high-dimensional, realistic patient cases, derived from empirical medical knowledge, removing the ambiguity of noisy health records.
             </p>
             <p>
-                This approach creates a safe 'sandbox' to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break. Because each synthetic case is entirely unique, there is no risk of a model having 'seen' it before, ensuring a true and unbiased evaluation of its reasoning capabilities.
+                This approach aims to create a a safe 'sandbox' to automate testing against the rare edge cases where algorithms are most likely to break. By generating unique cases at scale, we can bypass the bottleneck created of requiring human review and ensure models demonstrate true clinical reasoning rather than just memorising the test.
             </p>
         </section>
     </main>
