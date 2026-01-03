@@ -124,36 +124,46 @@
 
     <nav>
         <a href="index.html">Home</a>
+        <a href="synthetic.html">Simulation for Evaluation class="active">Simulation for Evaluation</a>
         <a href="effects.html">Treatment Effects</a>
-        <a href="synthetic.html" class="active">Synthetic Data</a>
         <a href="ml.html">Machine Learning</a>
         <a href="neurotools.html">Neuro Tools</a>
     </nav>
 
     <main>
         <section id="synthetic-data" class="content-section">
-            <h2>Realistic Synthetic Clinical Data Generation</h2>
-            <p>
-                Despite achieving superhuman scores on static exams, the deployment of medical AI is currently stalled by what I see as three structural barriers:
-            </p>
-
-            <ul class="limitations-list">
-                <li>
-                    Real-world health data is ostensibly abundant but functionally inaccessible. This is due to privacy silos and intrinsic noise within the data. It also lacks absolute "ground truth" - labels in electronic healthcare records are often delayed, inferred, or debated by experts; making them unreliable for rigorous model grading.
-                </li>
-                <li>
-                    AI models fail most catastrophically on edge cases which sit outside of the data distributions they were trained with - things like rare comorbidities, and atypical presentations. Because these scenarios appear too infrequently in historical datasets, we are currently 'flying blind' regarding model performance on complex or atypical cases.
-                </li>
-                <li>
-                    The current gold standard for safety assessments, is review by human physicians. This approach is not possible to scale meaningfully. It is impossible to hire enough doctors to manually audit the millions of permutations required to guarantee safety across all clinical variables.
-                </li>
-            </ul>
-            <p>
-                To address this, I'm developing an engine that automates the creation of high-dimensional, realistic patient cases, derived from empirical medical knowledge, removing the ambiguity of noisy health records.
-            </p>
-            <p>
-                This approach aims to create a a safe 'sandbox' to automate testing against the rare edge cases where algorithms are most likely to break. By generating unique cases at scale, we can bypass the bottleneck created of requiring human review and ensure models demonstrate true clinical reasoning rather than just memorising the test.
-            </p>
+        <h2>Simulation, Explainability, and Safety at Scale</h2>
+        <p>
+            We can't deploy AI in clinical settings until we can guarantee it's safe. We must identify exactly how and when algorithms fail <em>before</em> exposing patients to those risks. However, rigorous evaluation is currently stifled by the limitations of real-world medical data - it's often noisy, legally restricted, and lacks the volume of rare "edge cases" required for proper stress testing.
+        </p>
+        <p>
+            To solve this, I develop systems that anchor virtual patients and diagnostic logic in hardcoded medical rules. This approach creates a fully explainable environment designed to probe models for failure modes. By prioritising computationally lightweight architectures, we can generate infinite, privacy-free datasets to evaluate AI at a scale impossible with traditional methods.
+        </p>
+        <p>
+            This system offers:
+        </p>
+        <ul>
+            <li>
+                <strong>Breadth:</strong> Instant access to varied clinical scenarios, from common presentations to rare conditions that would take years to find in hospital records.
+            </li>
+            <li>
+                <strong>Depth:</strong> Granular feedback that pinpoints exactly why a diagnosis was correct or missed.
+            </li>
+        </ul>
+        <p>
+            This aims to bridge the current large gap between experimental code and clinical tools through better:
+        </p>
+        <ul>
+        <li>
+            <strong>Validation:</strong> Developers can stress-test models against thousands of dangerous 'red flag' scenarios, allowing algorithms to either ‘fail safely’ in a simulation or demonstrate their robustness.
+        </li>
+        <li>
+            <strong>Training:</strong> It provides the structured "reasoning traces" necessary to teach the next generation of AI models not just <em>what</em> the diagnosis is, but <em>how</em> to reach it.
+        </li>
+        </ul>
+        <p>
+            I've developed arly proof-of-principle in Headache and Multiple Sclerosis - identifying critical safety failures in frontier AI models, blind spots that remain invisible to standard evaluation but become clear only when tested at this level of depth and scale. With this baseline now in place, the platform's designed to be easily expanded to other clinical diagnoses and domains.
+        </p>
         </section>
     </main>
 
