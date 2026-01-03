@@ -188,13 +188,13 @@
         <section id="About">
             <h2>About</h2>
             <p>
-                I'm a researcher and neurology doctor at Imperial College London. My background combines machine learning, cognitive neuroscience, and clinical neurology. With the emergence of Large Language Models, I've recently inverted my research focus: instead of using machine learning to study human cognition, I'm now applying cognitive neuroscience principles to dissect the "clinical reasoning" of AI.
+                I'm a researcher and neurology doctor at Imperial College London.
             </p>
             <p>
-                This requires moving from data mining to "data manufacturing." I'm building systems that generate detailed synthetic patient data to systematically stress-test clinical AI. By simulating complex neurological scenarios, we can identify algorithmic "breaking points" and close the sim-to-real gap, helping ensure models are safe before they ever touch real patient data.
+                My work focuses on the safe deployment of AI in healthcare through rigorous evaluation.
             </p>
             <p>
-                In parallel, I create tools to improve data capture during routine care, trying to help turn noisy raw observations into clear, actionable effect size estimates.
+                I build virtual simulations of patients, doctors, and medical records anchored in strict medical logic. I'm using these to devleop new ways of evaluating medical AI, ranging from frontier LLMs to lightweight logical models, to replace unreliable guesswork with certainty. This allows us to stress-test algorithms against millions of rare scenarios virtually, ensuring we train better models and prove they are safe before they ever interact with a real patient.
             </p>
         </section>
         <section id="current-work">
@@ -202,13 +202,13 @@
             <p>Most of my current work involves creating realistic synthetic patient data and using simulation to quantify what's currently unquantifiable in clinical care.</p>
             <ul>
                 <li>
+                    <a href="synthetic.html"><strong>Realistic Synthetic Clinical Data Generation:</strong></a> I'm developing a novel engine that generates large volumes of realistically messy synthetic patient data, each paired with a high-dimensional set of 'ground-truth' labels. This data creates a safe 'sandbox' to stress-test clinical AI, allowing us to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, all without requiring access to real patient data.
+                </li>
+                <li>
                     <a href="effects.html"><strong>Quantifying Individual Treatment Effects:</strong></a> This work focuses on creating a framework to help clinicians move from intuitive guesswork to data-driven clinical decisions.
                     <a href="https://effectsize.app/" target="_blank">[effectsize.app]</a> | 
                     <a href="https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awaf343/8253752" target="_blank">[Paper]</a> | 
                     <a href="https://github.com/stepdaug/effectiveness_estimation" target="_blank">[Code]</a>
-                </li>
-                <li>
-                    <a href="synthetic.html"><strong>Realistic Synthetic Clinical Data Generation:</strong></a> I'm developing a novel engine that generates large volumes of realistically messy synthetic patient data, each paired with a high-dimensional set of 'ground-truth' labels. This data creates a safe 'sandbox' to stress-test clinical AI, allowing us to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, all without requiring access to real patient data.
                 </li>
                 <li>
                     <a href="ml.html"><strong>Machine Learning to Uncover Hidden Treatment Responses:</strong></a> This research demonstrates how machine learning can detect complex patterns in clinical trial data that traditional analyses might miss. A key focus is understanding the data requirements and collection practices necessary to make this possible.
