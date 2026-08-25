@@ -19,7 +19,54 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Auger</title>
+    <title>Dr Stephen Auger | Clinical AI, Neurology & Computational Neuroscience</title>
+    <meta name="description" content="Dr Stephen Auger is a Post-CCT NIHR Clinical Lecturer in Neurology at Imperial College London. Research focuses on clinical AI evaluation, synthetic patient simulations, and practical healthcare engineering.">
+    <meta name="keywords" content="Clinical AI, Medical AI, Health AI, Neurology, Stephen Auger, Imperial College London, AI Evaluation, Synthetic Clinical Data, Treatment Effects, Healthcare Machine Learning">
+    <!-- Schema.org Structured Data for Knowledge Graph Ingestion -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr Stephen Auger",
+      "jobTitle": "NIHR Clinical Lecturer in Neurology",
+      "worksFor": [
+        {
+          "@type": "MedicalOrganisation",
+          "name": "Imperial College London"
+        },
+        {
+          "@type": "MedicalOrganisation",
+          "name": "Imperial College Healthcare NHS Trust"
+        },
+        {
+          "@type": "ResearchOrganisation",
+          "name": "UK Dementia Research Institute"
+        }
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University College London"
+        }
+      ],
+      "knowsAbout": [
+        "Clinical Artificial Intelligence",
+        "Medical AI Safety and Evaluation",
+        "Synthetic Clinical Data Generation",
+        "Cognitive Neuroscience",
+        "Neurology",
+        "Treatment Effect Heterogeneity",
+        "Clinical Decision Support Systems"
+      ],
+      "url": "https://stepdaug.github.io/",
+      "sameAs": [
+        "https://profiles.imperial.ac.uk/s.auger21",
+        "https://github.com/stepdaug",
+        "https://scholar.google.com/citations?user=4WU8qVQAAAAJ&hl=en"
+        "https://www.linkedin.com/in/stephen-a-24a683236/"
+      ]
+    }
+    </script>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -188,25 +235,25 @@
         <section id="About">
             <h2>About</h2>
             <p>
-                I'm a researcher and neurology doctor at Imperial College London.
+                I'm a computational researcher and neurologist doctor at Imperial College London.
             </p>
             <p>
-                My work aims to help facilitate safe deployment of AI in healthcare through rigorous evaluation.
+                My work aims to help facilitate safe deployment of AI in healthcare through rigorous evaluation. My work sits at the interface of active clinical practice, AI safety/evaluation, and cognitive neuroscience.
             </p>
             <p>
-                I build virtual simulations of patients, doctors, and medical records anchored in strict medical logic. I'm using these to devleop new ways of evaluating medical AI, to replace current unreliable guesswork with certainty. This allows us to stress-test algorithms against thousands to millions of rare scenarios virtually, ensuring we train better models and prove they are safe before they ever interact with a real patient.
+                My core research addresses an important bottleneck in medical AI, namely **how to rigorously stress-test and evaluate clinical models before they reach real patients.** To solve this, I build logic-grounded doctor–patient interaction simulations and detailed synthetic data pipelines. These environments allow us to test AI and decision systems against thousands of rare counterfactual scenarios and clinical 'edge cases' that rarely appear in standard benchmark datasets.
             </p>
         </section>
         <section id="current-work">
             <h2>Current Work & Interests</h2>
             <ul>
                 <li>
-                    <a href="synthetic.html"><strong>Realistic Synthetic Clinical Data Generation:</strong></a> I'm developing a novel methods for generating large volumes of realistic synthetic patient data, each paired with a high-dimensional set of 'ground-truth' labels. This allows us to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, all without requiring access to real patient data.
+                    <a href="synthetic.html"><strong>Simulation-Based Evaluation of Clinical AI:</strong></a> Standard benchmark datasets (e.g. retrospective EHR cohorts, case reports or board-exam Q&As) fail to capture the conversational ambiguity, diagnostic drift, and high-stakes edge cases of real clinical practice. I'm developing a novel methods for generating large volumes of realistic synthetic patient data to strategically probe for failures in the atypical 'edge cases' where algorithms are most likely to break, all without requiring access to real patient data.
                     <a href="https://www.medrxiv.org/cgi/content/short/2026.03.23.26349082v1" target="_blank">[Paper in the context of Headache]</a> 
                     <a href="https://www.medrxiv.org/content/10.64898/2026.04.22.26351488v1" target="_blank">[Paper in the context of Multiple Sclerosis]</a> 
                 </li>
                 <li>
-                    <a href="synthetic.html"><strong>Assessing the Boundaries of Local Medical AI:</strong></a> Related to above, I'm exploring practical use of small, locally deployable AI models in healthcare. My focus is on finding the smallest possible models that can still handle certain medical tasks reliably without needing to send data to the cloud. Testing how these models 'understand' medical concepts, helps clarify what compact AI might realistically achieve and where it falls short.
+                    <a href="synthetic.html"><strong>Assessing the Boundaries of Local Medical AI:</strong></a> Related to above, I'm exploring practical use of small, locally deployable AI models in healthcare. My focus is on finding the smallest possible models that can still handle certain medical tasks reliably without needing to send data to the cloud or expensive large systems. Testing how these models 'understand' medical concepts, helps clarify what compact AI might realistically achieve and where it falls short.
                     <a href="https://www.medrxiv.org/content/10.64898/2026.02.24.26346972v1" target="_blank">[Paper]</a> 
                 </li>
                 <li>
@@ -223,10 +270,20 @@
             </ul>
         </section>
         
-        <section id="selected-work">
-            <h2>Selected Tools & Guides</h2>
+        <section id="open-tools">
+            <h2>Applied Clinical Systems & Open-Source Tools/Work</h2>
              <ul>                 
                 <li>
+                    <a href="https://consrota.streamlit.app/" target="_blank">Automated NHS Clinical On-Call Rota Engine</a><br>
+                    * **The Problem:** Departmental on-call scheduling in acute hospital settings is a high-dimensional constraint optimisation problem (balancing job plans, leave, multi-site specialty coverage). It historically consumed days of senior clinician time each rota cycle.
+                    * **The Solution:** Developed a dedicated constraint-solving application built in Python/Streamlit that automates conflict-free rota generation, which is now used across multiple Hospitals, compressing scheduling work from days to minutes while enforcing a fair rota.                    
+                </li>
+                 <li>
+                    <a href="https://effectsize.app" target="_blank">Individual Treatment Effect Quantifier (`effectsize.app`)</a><br>
+                    * **Focus:** Moving clinical data interpretation beyond guesswork towads a more rigorous statistical/quantitative exercise.
+                    * **Output:** An interactive tool illustrating potential benefits of actively engaging with statistical assessment of whether treatment response variation reflects true change or statistical noise.
+                </li>
+                 <li>
                     <a href="https://neuroclinic.streamlit.app/" target="_blank">Epilepsy/Neurology Consultation Webtool</a><br>
                     A tool I made to assist with documentation and information presentation in epilepsy and neurology consultations.
                 </li>
@@ -240,6 +297,7 @@
                 </li>
             </ul>
         </section>
+        
 
         <section id="Previous research">
             <h2>Previous research</h2>
@@ -325,13 +383,15 @@
                     <a href="https://discovery.ucl.ac.uk/id/eprint/1456771/" target="_blank">[Link]</a>
                 </li>
             </ul>
+            <h3>Collaboration</h3>
+            <p class="section-subtitle">I regularly collaborate with clinical departments, academic labs, and AI research teams working on high-reliability clinical models, evaluation frameworks, and privacy-first healthcare deployment. eel free to reach out via [first initial].[surname]21@imperial.ac.uk</p>
             <h3>Funding</h3>
             <p class="section-subtitle">I am grateful to those who have funded my research to date. Current: NIHR Acadmic Clinical Lectureship and NIHR Imperial Biomedical Research Centre (BRC). Previous: NIHR Academic Clinical Fellowship, NIHR Academic Foundation Programme, University College London Hospitals/University College London NIHR BRC funding scheme.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Stephen Auger | Last updated: April 2026</p>
+        <p>&copy; 2026 Stephen Auger | Last updated: August 2026</p>
     </footer>
 
 </body>
